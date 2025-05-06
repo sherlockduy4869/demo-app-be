@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:18-alpine:latest
 
 WORKDIR /app
 
@@ -13,7 +13,6 @@ RUN npm run build
 EXPOSE 3001
 
 CMD ["node", "dist/main.js"]
-    
     
     
     
