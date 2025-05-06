@@ -1,22 +1,25 @@
-FROM node:18-alpine 
+# Start from a Node.js 20 base image
+FROM public.ecr.aws/docker/library/node:21-alpine
 
-# Set working directory
+# Set the working directory to /app
 WORKDIR /app
-    
-# Install app dependencies
-COPY package*.json ./
 
-RUN npm install
-    
-# Copy app source code
+# Copy package.json and package-lock.json to the docker image
+COPY package*.json /app
+
+# Install all the dependencies
+RUN npm install --force
+
+# Install NestJS CLI globally in the docker image
+RUN npm install -g @nestjs/cli
+
+# Copy the rest of the application to the docker image
 COPY . .
 
+# Build the application
 RUN npm run build
 
-# Expose port (change if your app listens on a different one)
 EXPOSE 3001
-    
-# Run the app
-CMD ["npm", "run", "start:prod"]
-    
-    
+
+# Start the application
+CMD ["npm", "run", "start"]
