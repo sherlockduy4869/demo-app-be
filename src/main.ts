@@ -14,8 +14,8 @@ async function bootstrap() {
   });
   app.setGlobalPrefix('api/v1');
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(port);
-
+  logger.log(`Vao toi day roi ne`);
+  await app.listen(port, '0.0.0.0');
   logger.log(`Application listening on port ${port}`);
 }
 bootstrap();
