@@ -4,7 +4,7 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const logger = new Logger('bootstrap');
-  const port = 8080;
+  const port = 3001;
 
   const app = await NestFactory.create(AppModule);
   app.enableCors({
