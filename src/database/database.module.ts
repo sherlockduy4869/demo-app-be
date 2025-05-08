@@ -7,13 +7,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     TypeOrmModule.forRootAsync({
       useFactory: (configService: ConfigService) => ({
         type: 'mysql',
-        host: 'localhost',
+        host: 'db-demo-app.c9qq4goo01qb.eu-north-1.rds.amazonaws.com',
         port: 3306,
-        username: 'root',
-        password: 'Conan1@3',
-        database: 'demo_app_db',
-        autoLoadEntities: true,
-        synchronize: true, // Use only in development
+        username: 'admin',
+        password: 'Conan12#456',
+        database: 'db_demo_app',
+        // autoLoadEntities: true,
+        // synchronize: true, // Use only in development
       }),
       inject: [ConfigService],
     }),
