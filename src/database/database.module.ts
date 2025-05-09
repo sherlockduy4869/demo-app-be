@@ -13,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         password: 'Conan12#456',
         database: 'db_demo_app',
         autoLoadEntities: true,
-        synchronize: true, // Use only in development
+        synchronize: false, // Use only in development
       }),
       inject: [ConfigService],
     }),
