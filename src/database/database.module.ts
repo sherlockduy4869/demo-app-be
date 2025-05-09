@@ -7,7 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     TypeOrmModule.forRootAsync({
       useFactory: (configService: ConfigService) => ({
         type: 'mysql',
-        host: 'demo-app-db.c9qq4goo01qb.eu-north-1.rds.amazonaws.com',
+        host: 'demo-app-default-vpc.c9qq4goo01qb.eu-north-1.rds.amazonaws.com',
         port: 3306,
         username: 'admin',
         password: 'Conan12#456',
