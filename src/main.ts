@@ -12,7 +12,7 @@ async function bootstrap() {
     allowedHeaders: 'Content-Type, Access-Control-Allow-Headers, Authorization',
     credentials: true,
   });
-  app.setGlobalPrefix('api/v1');
+  // app.setGlobalPrefix('api/v1');
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(3001, '0.0.0.0');
   logger.log(`Application listening on port ${port}`);
