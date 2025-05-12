@@ -31,6 +31,11 @@ export class UserController {
     });
   }
 
+  @Get()
+  getHealth() {
+    return { status: 'ok' };
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.userService.findOne(+id);
