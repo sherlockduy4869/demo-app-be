@@ -14,7 +14,7 @@ async function bootstrap() {
   });
   app.setGlobalPrefix('api/v1');
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(process.env.PORT ?? 3001);
+  await app.listen(3001, '0.0.0.0');
   logger.log(`Application listening on port ${port}`);
 }
 bootstrap();
