@@ -31,7 +31,7 @@ export class UserController {
     });
   }
 
-  @Get()
+  @Get('health')
   getHealth() {
     return { status: 'ok' };
   }
