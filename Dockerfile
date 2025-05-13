@@ -8,10 +8,7 @@ WORKDIR /app
 COPY package*.json /app
 
 # Install all the dependencies
-RUN npm install --force
-
-# Install NestJS CLI globally in the docker image
-RUN npm install -g @nestjs/cli
+RUN npm install
 
 # Copy the rest of the application to the docker image
 COPY . .
