@@ -33,7 +33,7 @@ export class UserController {
 
   @Get('health')
   getHealth() {
-    return { status: 'ok' };
+    return { status: 'Goi tu back-end ok roi nha' };
   }
 
   @Get(':id')
